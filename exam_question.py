@@ -79,7 +79,6 @@ while askRetry:
                     exit()
         
         if (selected <= numExam and selected >= 1):
-            # Bunu eklememin sebebi satir 73'te aciklandi.
 
             print(f"\n{selected}. Sinavin Sonuclari:\nVize: {examList['Vize'][selected-1]}\nFinal: {examList['Final'][selected-1]}\nOrtalama: {examList['Ortalama'][selected-1]}\nSonuc: {examList['Sonuc'][selected-1]}")
             
@@ -93,9 +92,6 @@ while askRetry:
                 detail = input("Yanlis bir tusa bastiniz. Lutfen sorgulama icin 'e', programdan cikmak icin 'h'ye basiniz: ")
         else:
             print("\nYanlis bir sayi girdiniz. Girdiginiz sinav sayisindan fazla veya az sayi giremezsiniz.")
-            # Kullanici eger 1 ders girip 2. sinav sonucuna bakmak isterse ve hata alip daha sonra
-            # 1. sinavi secerse, program "selected" degiskeni integer olmadan print satirina giriyor
-            # ve "int ile str arasi islem yapamazsin" diyor. Bu nedenle oraya int donusum satiri ekledim.
     
     elif (detail == "h"):
         askRetry = False
