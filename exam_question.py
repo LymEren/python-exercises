@@ -9,10 +9,8 @@ numExam = input("Eklemek istediginiz ders sayisini giriniz: ")
 while type(numExam) != int:
     try:
         int(numExam)
-        checkPoint = True
         numExam = int(numExam)
     except ValueError:
-        checkPoint = False
         numExam = input("Lutfen tam sayi giriniz. Cikmak icin e'ye basabilirsiniz: ")
         if numExam == "e":
             exit()
@@ -69,10 +67,8 @@ while askRetry:
         while type(selected) != int: 
             try:
                 int(selected)
-                checkPoint = True
                 selected = int(selected)
             except ValueError:
-                checkPoint = False
                 selected = input("Lutfen tam sayi giriniz. Cikmak icin e'ye basabilirsiniz: ")
                 
                 if selected == "e":
