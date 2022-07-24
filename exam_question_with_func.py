@@ -3,7 +3,7 @@
 
 versionNotes = input("\nSinav Defterine Hosgeldiniz!\n\nVersiyon notlarini gormek icin v'ye basiniz. Devam etmek icin bir tusa basin: ")
 if versionNotes == "v":
-    print("\nSinav Defteri Version 0.3\n- Girdinin numara olup olmadigini kontrol eden dongu fonksiyona cevrildi (tryNum fonksiyonu).\n- Vize ve Final kullacini girislerinde numara yazilmadigi durumda hata duzeltildi.\n- Programi artik daha zor kiriyorsunuz :)\n")
+    print("\Not Defteri Version 0.3\n- Girdinin numara olup olmadigini kontrol eden dongu fonksiyona cevrildi (tryNum fonksiyonu).\n- Vize ve Final kullacini girislerinde numara yazilmadigi durumda hata duzeltildi.\n- Programi artik daha zor kiriyorsunuz :)\n")
 
 numExam = input("\nEklemek istediginiz ders sayisini giriniz: ")
 
