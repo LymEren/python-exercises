@@ -1,19 +1,36 @@
 # Not Kayit/Sonuc Ornegi 3. Gun Odevi - Eyyub Eren
 
-print("Sinav Defteri version 00000000000.1\n\nHosgeldiniz!")
+
+print("\nSinav Defteri (Version 0.2)\n\nHosgeldiniz!")
 
 numExam = input("Eklemek istediginiz ders sayisini giriniz: ")
 
 # Tam sayi girilmesi icin kosul ekledim
 
-while type(numExam) != int:
-    try:
-        int(numExam)
+# Try Except dongusu version 0.2 de degistirildi.
+# while type(numExam) != int:
+#     try:
+#         int(numExam)
+#         numExam = int(numExam)
+#     except ValueError:
+#         numExam = input("Lutfen tam sayi giriniz. Cikmak icin e'ye basabilirsiniz: ")
+#         if numExam == "e":
+#             exit()
+
+numSwitch = True # While dongusu icin
+
+while numSwitch:
+    if numExam.isnumeric():
         numExam = int(numExam)
-    except ValueError:
-        numExam = input("Lutfen tam sayi giriniz. Cikmak icin e'ye basabilirsiniz: ")
+        if numExam > 0:
+            numSwitch = False
+        else:
+            numExam = input("Lutfen 0'dan buyuk tamsayi giriniz: ")
+    else:
+        numExam = input("Lutfen 0'dan buyuk tamsayi giriniz. Cikmak isterseniz 'e' ye basiniz: ")
         if numExam == "e":
             exit()
+numSwitch = True
 
 # Veriler icin dictionary kullandim.
 examList = {
@@ -62,17 +79,19 @@ while askRetry:
     if (detail == "e"):
         selected = input("Kacinci sinavin sonucunu gormek istersiniz: ") 
         
-        # Burada birkac farkli deneme yaptim ve en son while ve try except yapilarini kullandim.
-    
-        while type(selected) != int: 
-            try:
-                int(selected)
+        numSwitch = True
+        while numSwitch:
+            if selected.isnumeric():
                 selected = int(selected)
-            except ValueError:
-                selected = input("Lutfen tam sayi giriniz. Cikmak icin e'ye basabilirsiniz: ")
-                
+                if selected > 0:
+                    numSwitch = False
+                else:
+                    selected = input("Lutfen 0'dan buyuk tamsayi giriniz: ")
+            else:
+                selected = input("Lutfen 0'dan buyuk tamsayi giriniz. Cikmak isterseniz 'e' ye basiniz: ")
                 if selected == "e":
                     exit()
+        numSwitch = True
         
         if (selected <= numExam and selected >= 1):
 
