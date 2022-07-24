@@ -1,11 +1,14 @@
 # Not Kayit/Sonuc Ornegi - Eyyub Eren
 
 
-versionNotes = input("\nSinav Defterine Hosgeldiniz!\n\nVersiyon notlarini gormek icin v'ye basiniz. Devam etmek icin bir tusa basin: ")
+versionNotes = input("\nNot Defterine Hosgeldiniz!\n\nVersiyon notlarini gormek icin v'ye basiniz. Devam etmek icin bir tusa basin: ")
 if versionNotes == "v":
-    print("\Not Defteri Version 0.3\n- Girdinin numara olup olmadigini kontrol eden dongu fonksiyona cevrildi (tryNum fonksiyonu).\n- Vize ve Final kullacini girislerinde numara yazilmadigi durumda hata duzeltildi.\n- Programi artik daha zor kiriyorsunuz :)\n")
+    print("\nNot Defteri Version 0.3\n\n- Girdinin numara olup olmadigini kontrol eden dongu fonksiyona cevrildi (tryNum fonksiyonu).\n- Vize ve Final kullacini girislerinde numara yazilmadigi durumda hata duzeltildi.\n- Tum sinav sonuclarini gosterme ozelligi eklendi\n")
 
 numExam = input("\nEklemek istediginiz ders sayisini giriniz: ")
+
+
+# Tekrarlayan girdi kontrol islemleri icin fonksiyon kullanildi.
 
 def tryNum(x):
 
@@ -13,7 +16,7 @@ def tryNum(x):
     while numSwitch:
         if x.isnumeric():
             x = int(x)
-            if x > 0:
+            if x >= 0:
                 numSwitch = False
                 return x
             else:
@@ -74,7 +77,7 @@ askRetry = True # Yeniden sorgulama icin boolean bir degisken kullandim.
 while askRetry:
 
     if (detail == "e"):
-        selected = input("Kacinci sinavin sonucunu gormek istersiniz: ") 
+        selected = input("\nKacinci sinavin sonucunu gormek istersiniz? (Tum sonuclari gormek icin 0'a basiniz): ") 
         
         selected = tryNum(selected)
         
@@ -90,6 +93,10 @@ while askRetry:
                 print("\nGorusmek Uzere!")
             else:
                 detail = input("Yanlis bir tusa bastiniz. Lutfen sorgulama icin 'e', programdan cikmak icin 'h'ye basiniz: ")
+        elif(selected == 0 ):
+            for value in range (numExam):
+                print(f"\n{value+1}. Sinavin Sonuclari:\nVize: {examList['Vize'][value]}\nFinal: {examList['Final'][value]}\nOrtalama: {examList['Ortalama'][value]}\nSonuc: {examList['Sonuc'][value]}\n")
+                
         else:
             print("\nYanlis bir sayi girdiniz. Girdiginiz sinav sayisindan fazla veya az sayi giremezsiniz.")
     
