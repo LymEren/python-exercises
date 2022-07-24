@@ -1,7 +1,8 @@
 # Not Kayit/Sonuc Ornegi 3. Gun Odevi - Eyyub Eren
 
-
-print("\nSinav Defteri (Version 0.2)\n\nHosgeldiniz!")
+versionNotes = input("\nSinav Defterine Hosgeldiniz!\n\nVersiyon notlarini gormek icin v'ye basiniz. Devam etmek icin bir tusa basin: ")
+if versionNotes == "v":
+    print("\nSinav Defteri Version 0.2\n- Try-Except dongusu degistirildi.\n- Versiyon kontrol ekrani eklendi.\n- Calisma performansi arttirildi (Yani sanirim)\n")
 
 numExam = input("Eklemek istediginiz ders sayisini giriniz: ")
 
@@ -29,6 +30,7 @@ while numSwitch:
     else:
         numExam = input("Lutfen 0'dan buyuk tamsayi giriniz. Cikmak isterseniz 'e' ye basiniz: ")
         if numExam == "e":
+            print("\nGorusmek Uzere!")
             exit()
 numSwitch = True
 
@@ -90,6 +92,7 @@ while askRetry:
             else:
                 selected = input("Lutfen 0'dan buyuk tamsayi giriniz. Cikmak isterseniz 'e' ye basiniz: ")
                 if selected == "e":
+                    print("\nGorusmek Uzere!")
                     exit()
         numSwitch = True
         
@@ -102,7 +105,7 @@ while askRetry:
                 continue
             elif (retry == "h"):
                 askRetry = False
-                print("Gorusmek Uzere!")
+                print("\nGorusmek Uzere!")
             else:
                 detail = input("Yanlis bir tusa bastiniz. Lutfen sorgulama icin 'e', programdan cikmak icin 'h'ye basiniz: ")
         else:
@@ -110,7 +113,7 @@ while askRetry:
     
     elif (detail == "h"):
         askRetry = False
-        print("Gorusmek Uzere!")
+        print("\nGorusmek Uzere!")
         
     else:
         detail = input("\nYanlis bir tusa bastiniz. Lutfen sorgulama icin 'e', programdan cikmak icin 'h'ye basiniz:" )
