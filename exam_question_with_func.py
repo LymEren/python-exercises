@@ -62,7 +62,7 @@ for value in range(numExam):
         examList["Sonuc"].append(f"Kaldiniz")
             
 
-print(f"\n*** {numExam} dersten {counter1} tanesini gectiniz ***")
+print(f"\n*** {numExam} dersten {counter1} tanesini gectiniz! Tebrikler! ***")
 
 ############################################################################
 
