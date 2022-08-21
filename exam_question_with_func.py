@@ -14,7 +14,7 @@ def tryNum(x):
 
     numSwitch = True # While dongusu icin
     while numSwitch:
-        if x.isnumeric():
+        if x.isnumeric(): # Girilen degerin numerik olup olmadigini kontrol ediyor
             x = int(x)
             if x >= 0:
                 numSwitch = False
