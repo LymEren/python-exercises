@@ -1,3 +1,3 @@
-Python Exercises (Etiya - Kodlama.io)
+Python Exercises 
 
 Eyyub Eren
