@@ -102,7 +102,8 @@ while askRetry:
     
     elif (detail == "h"):
         askRetry = False
-        print("\nGorusmek Uzere!")
+        
+        print("\nTekrar Gorusmek Uzere!")
         
     else:
         detail = input("\nYanlis bir tusa bastiniz. Lutfen sorgulama icin 'e', programdan cikmak icin 'h'ye basiniz:" )
