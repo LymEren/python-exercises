@@ -43,7 +43,7 @@ for _ in range(lineCount):
             std_error()
 
     else:
-        if stdNote == 'Girmedi':
+        if stdNote == 'Didnt take the exam':
             stdResult = "F"
             std_result()
         else:
