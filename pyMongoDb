@@ -1,0 +1,33 @@
+import pymongo
+
+# DB connection definitions
+mongoOne = pymongo.MongoClient("your first connection")
+mongoTwo = pymongo.MongoClient("your second connection")
+
+# Database and colletion name search
+# print(mongoOne.list_database_names())
+# print(mongoOne['sample'].list_collection_names())
+
+# First Database
+firstDev = mongoCpq['sample']
+# Quote Document Collection
+quoteDocument = firstDev['quoteDocument']
+
+# Quote with id
+myQuote = list(quoteDocument.find({'cust_id': 1234}))
+
+print(f'\nQuote: {myQuote}')
+
+quoteStatus = myQuote[0]['parameter1']
+print(f"\nQuote Status: {quoteStatus}")
+
+if quoteStatus == 'FIRST':
+    print('Validation Successful!')
+else:
+    print('Validation Failed!')
+
+# Alternative: Mongo Db Query
+# Find quote status with mongo query
+myOrderStatus = quoteDocument.find({'cust._id': 1244}, {"parameter1": 1, "_id": 0})
+queryQuoteStatus = myOrderStatus[0].get('parameter1')
+print(f"\nQuote status with query: {queryQuoteStatus}")
